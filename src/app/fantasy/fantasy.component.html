@@ -1,0 +1,37 @@
+<div class="container cont">
+  <div class="row py-3">
+    <div class="col-md-3" *ngFor="let game of fantList | slice: 0:count * 60">
+      <div class="card grow" style="width: 15rem">
+        <a [routerLink]="['/details', game.id]">
+          <img src="{{ game.thumbnail }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ game.title | slice: 0:15
+              }}<span class="float-end badge-ftg py-1 px-2 rounded-2"
+                >free</span
+              >
+            </h5>
+            <div class="clearfix"></div>
+            <p class="card-text text-muted">
+              {{ game.short_description | slice: 0:25 }}....
+            </p>
+            <i class="fas fa-plus-square"></i>
+            <span class="float-end badge badge-secondary">{{
+              game.genre
+            }}</span>
+            <div class="clearfix"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button
+      *ngIf="count * 60 < fantList.length"
+      (click)="count = count + 1"
+      class="btn btn-danger btn-1 mb-5"
+    >
+      more games
+    </button>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.jumbotron {
+  background: url(../../assets/img/paladins.b44d33d6e7ee1ba8.png);
+  background-repeat: no-repeat;
+  background-color: #1c1e22;
+  background-position: top;
+  background-size: contain;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 4rem 8rem;
+}
+.ftg-blue {
+  color: #49acff !important;
+}
+h5 {
+  font-size: 14px !important;
+}
+.card {
+  background-color: #32383e;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.6);
+  border-radius: 0.25rem;
+  margin-bottom: 20px !important;
+}
+.card-text {
+  font-size: 12px;
+}
+.grow {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  height: 250px;
+}
+.grow:hover {
+  transform: scale(1.03);
+}
+
+.badge-ftg {
+  color: #fff;
+  background-color: #4799eb;
+  font-size: 12px;
+}
+.card-title {
+  font-size: 18px !important;
+}
+.text-muted {
+  color: #7a8288 !important;
+}
+.badge-secondary {
+  background-color: #7a8288;
+  color: #272b30 !important;
+  font-size: 9px !important;
+  margin-top: 5px;
+}
+.con {
+  width: 66%;
+}
+a {
+  text-decoration: none;
+  color: #7a8288 !important;
+}

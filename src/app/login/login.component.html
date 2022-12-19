@@ -1,0 +1,92 @@
+<div class="container con mt-5">
+  <div class="card border-0">
+    <div class="card-body p-0">
+      <div class="row">
+        <div class="col-lg-6 bg-register-image"></div>
+
+        <div class="col-lg-6 graay">
+          <div class="px-5">
+            <div _ngcontent-tek-c20="" class="text-center">
+              <img
+                _ngcontent-tek-c20=""
+                src="../../assets/img/logo.png"
+                alt=""
+                height="72"
+                class="mb-3"
+              />
+              <h1 _ngcontent-tek-c20="" class="h4 text-gray-900 mb-4">
+                Log in to GameOver
+              </h1>
+            </div>
+            <form
+              [formGroup]="logform"
+              (ngSubmit)="submitform()"
+              class="user text-white"
+            >
+              <div class="form-group row"></div>
+              <div class="form-group mb-3">
+                <input
+                  formControlName="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  class="form-control form-control-sm deep"
+                />
+                <div
+                  *ngIf="
+                    logform.get('email')?.errors &&
+                    logform.get('email')?.touched
+                  "
+                  class="req rounded-1 ps-2"
+                >
+                  <p *ngIf="logform.get('email')?.getError; email">
+                    email should be valid
+                  </p>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <input
+                  formControlName="password"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form-control form-control-sm deep"
+                />
+                <div
+                  *ngIf="
+                    logform.get('password')?.errors &&
+                    logform.get('password')?.touched
+                  "
+                  class="req rounded-1 ps-2"
+                >
+                  password is required
+                </div>
+              </div>
+              <button
+                type="submit"
+                name="submitButton"
+                class="btn btn-primary text-white w-100"
+              >
+                <span>login</span>
+              </button>
+            </form>
+            <hr />
+            <div class="text-center">
+              <a
+                onclick="(()=>{alert('ههه اعمل اكونت جديد')})()"
+                class="small a2 cursor"
+                >Forgot Password?</a
+              >
+            </div>
+            <div class="text-center">
+              <span class="small">Not a member yet? </span>
+              <a class="small a2" routerLink="/resgister"
+                >Create Account<i class="fas fa-chevron-right small"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

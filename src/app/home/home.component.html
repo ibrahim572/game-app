@@ -1,0 +1,43 @@
+<section class="jumbotron text-center">
+  <div class="container mb-n2">
+    <h1 class="jumbotron-heading">
+      Find &amp; track the best
+      <span class="ftg-blue">free-to-play</span> games!
+    </h1>
+    <p class="lead text-muted">
+      Track what you've played and search for what to play next! Plus get free
+      premium loot!
+    </p>
+    <p>
+      <a
+        role="button"
+        class="btn btn-outline-secondary btn-md ml-0"
+        routerLink="/all"
+        >Browse Games</a
+      >
+    </p>
+  </div>
+</section>
+<section>
+  <div class="container con my-5">
+    <h3><i class="fas fa-robot mr-2"></i>Personalized Recommendations</h3>
+    <div class="row py-4">
+      <div class="col-md-4" *ngFor="let home of homeList | slice: 0:count * 3">
+        <div class="card grow" style="width: 20rem">
+          <a [routerLink]="['/details', home.id]">
+            <img src="{{ home.thumbnail }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ home.title | slice: 0:15
+                }}<span class="float-end badge-ftg py-1 px-2 rounded-2"
+                  >free</span
+                >
+              </h5>
+              <div class="clearfix"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

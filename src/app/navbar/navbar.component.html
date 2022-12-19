@@ -1,0 +1,218 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container con">
+    <img src="../../assets/img/logo.png" class="w-10" />
+    <a routerlink="home" class="navbar-brand">Game Over</a>
+    <button
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="true"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarSupportedContent" class="navbar-collapse ms-4 collapse show">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            *ngIf="isLogin"
+            aria-current="page"
+            routerLink="home"
+            class="nav-link active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isLogin" class="nav-link" routerLink="all">All</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            *ngIf="isLogin"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+          >
+            Platforms
+          </a>
+          <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+            <li role="menuitem">
+              <a class="dropdown-item" routerLink="media">pc</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="browser">browser</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            *ngIf="isLogin"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+          >
+            sort-by
+          </a>
+          <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="release-data"
+                >release-date</a
+              >
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="popularity">popularity</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="alphabetical"
+                >alphabetical</a
+              >
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a
+                _ngcontent-tek-c23=""
+                class="dropdown-item"
+                routerLink="relevance"
+                >relevance</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            *ngIf="isLogin"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            class="nav-link dropdown-toggle"
+          >
+            Categories
+          </a>
+          <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="racing">racing</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="sports">sports</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="social">social</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="shooter">shooter</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="world">open-world</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="zompie">zombie</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="fantazy">fantasy</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="actionrpg">action-rpg</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="action">action</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="fighting">flight</a>
+            </li>
+            <li
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+            >
+              <a class="dropdown-item" routerLink="battle">battle-royale</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mb-2 ms-auto mb-lg-0">
+        <li
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          class="nav-item m-2"
+        >
+          <a *ngIf="!isLogin" routerLink="login" class=".cl nav-link">Login</a>
+        </li>
+        <li
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          class="nav-item m-2"
+        >
+          <a *ngIf="!isLogin" routerLink="login" class="clo nav-link rounded-3"
+            >loin free</a
+          >
+        </li>
+        <li
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          class="nav-item m-2"
+        >
+          <a
+            *ngIf="isLogin"
+            routerlink="/login"
+            (click)="logOut()"
+            class="clo nav-link rounded-3"
+            href="#/login"
+            >Log Out</a
+          >
+        </li>
+
+        <!---->
+      </ul>
+    </div>
+  </div>
+</nav>
